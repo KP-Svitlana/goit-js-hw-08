@@ -38,7 +38,7 @@ function getFillInputs() {
   const savedMessage = localStorage.getItem(FEEDBACK_FORM);
 
   if (savedMessage) {
-    formData = JSON.parse(savedMessage);
+    const formData = JSON.parse(savedMessage);
     form.elements.email.value = formData.email;
     form.elements.message.value = formData.message;
   }
