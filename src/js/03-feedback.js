@@ -29,7 +29,7 @@ function onFormSubmit(ev) {
   if (email.value === '' || message.value === '') {
     return alert('Please  fill the form');
   }
-  console.log(`Email: ${email.value}, Message: ${message.value}`);
+  console.log(JSON.parse(localStorage.getItem(FEEDBACK_FORM)));
   ev.currentTarget.reset();
   localStorage.removeItem(FEEDBACK_FORM);
 }
