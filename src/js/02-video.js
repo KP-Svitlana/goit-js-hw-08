@@ -12,4 +12,6 @@ function getLocalStorageTime(data) {
   localStorage.setItem(CURRENT_TIME, data.seconds);
 }
 
-player.setCurrentTime(localStorage.getItem(CURRENT_TIME));
+if (localStorage.getItem(CURRENT_TIME) !== null) {
+  player.setCurrentTime(localStorage.getItem(CURRENT_TIME));
+}
